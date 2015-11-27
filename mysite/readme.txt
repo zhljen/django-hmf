@@ -1,0 +1,1 @@
+1. postgres -D /usr/local/pgsql/data >logfile 2>&1 &
