@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls', namespace="polls")),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
-
+    url(r'^profile/', include('userprofile.urls')),
 ]
 
 if settings.DEBUG:

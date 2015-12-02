@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'django_extensions',
     'polls',
     'registration',
-    'foodgo'
+    'foodgo',
+    'userprofile'
 )
 
 MIDDLEWARE_CLASSES = (

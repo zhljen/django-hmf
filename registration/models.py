@@ -18,7 +18,6 @@ from django.utils import six
 from .users import UserModel, UserModelString
 
 
-
 SHA1_RE = re.compile('^[a-f0-9]{40}$')
 
 
@@ -198,6 +197,8 @@ class RegistrationProfile(models.Model):
 
     """
     user = models.OneToOneField(UserModelString(), verbose_name=_('user'))
+    address = models.CharField( max_length = 50, default='address' )
+    seller = models.BooleanField(default=False)
     activation_key = models.CharField(_('activation key'), max_length=40)
     activated = models.BooleanField(default=False)
 
@@ -321,3 +322,7 @@ class RegistrationProfile(models.Model):
                 email_message.attach_alternative(message_html, 'text/html')
 
         email_message.send()
+
+
+
+

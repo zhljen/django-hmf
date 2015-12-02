@@ -34,10 +34,11 @@ class RegistrationForm(UserCreationForm):
     """
     required_css_class = 'required'
     email = forms.EmailField(label=_("E-mail"))
-
+    address = forms.CharField(label=_("Address"))
+    seller = forms.BooleanField(label=("Seller"))
     class Meta:
         model = User
-        fields = (UsernameField(), "email")
+        fields = (UsernameField(), "email", "address", "seller")
 
 
 class RegistrationFormTermsOfService(RegistrationForm):
